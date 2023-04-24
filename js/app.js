@@ -86,6 +86,33 @@
         },
     });
 
+    var swiperSlider = new Swiper(".swiper-slider", {
+        pagination: {
+            el: ".swiper-pagination-slider",
+            clickable: true,
+        },
+        slidesPerView: 3,
+        spaceBetween: 30,
+        breakpoints: {
+            100: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    var swiperValues = new Swiper(".swiper-values", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination-slider-values",
+            clickable: true,
+        },
+    });
+
     var swiperMetodologia = new Swiper(".swiper-metodologia", {
         pagination: {
             el: ".swiper-pagination-slider-metodologia",
@@ -134,7 +161,7 @@
     var swiperOptions = new Swiper(".swiper-options", {
         spaceBetween: 30,
         pagination: {
-            el: ".swiper-pagination-slider-options",
+            el: ".swiper-pagination-slider-options-sol",
             clickable: true
         },
         breakpoints: {
@@ -148,6 +175,90 @@
                 slidesPerView: 2,
                 grid: {
                     rows: 2,
+                },
+            },
+        },
+    });
+
+    var swiperOptions2 = new Swiper(".swiper-options-2", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination-slider-options-2-sol",
+            clickable: true
+        },
+        breakpoints: {
+            100: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    var swiperBeneficios = new Swiper(".swiper-beneficios", {
+        spaceBetween: 0,
+        pagination: {
+            el: ".swiper-pagination-slider-beneficios",
+            clickable: true
+        },
+        breakpoints: {
+            100: {
+                slidesPerView: 1,
+                grid: {
+                    rows: 1,
+                },
+            },
+            991: {
+                slidesPerView: 2,
+                grid: {
+                    rows: 2,
+                },
+            },
+        },
+    });
+
+    var swiperPlataform = new Swiper(".swiper-plataform", {
+        pagination: {
+            el: ".swiper-pagination-plataform",
+            clickable: true
+        },
+        breakpoints: {
+            100: {
+                slidesPerView: 1,
+                grid: {
+                    rows: 2,
+                },
+            },
+            991: {
+                slidesPerView: 2,
+                grid: {
+                    rows: 6,
+                },
+            },
+        },
+    });
+
+    var swiperBoxTeam = new Swiper(".swiper-team", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            100: {
+                slidesPerView: 1,
+                grid: {
+                    rows: 2,
+                },
+            },
+            991: {
+                slidesPerView: 3,
+                grid: {
+                    rows: 3,
                 },
             },
         },

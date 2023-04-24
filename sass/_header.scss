@@ -3,6 +3,12 @@
 
 	@media screen and (max-width: 991px) {
 		height: auto;
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+		top: 0;
+		left: 0;
+		box-shadow: 6px 6px 24px rgba(0, 0, 0, 0.2);
 	}
 
 	@media screen and (min-width: 992px) {
@@ -116,6 +122,17 @@
 						.nav-item {
 							height: 100%;
 							cursor: pointer;
+							
+							&.dropdown-open {
+								.nav-link {
+									&.active {
+										@media screen and (max-width: 991px) {
+											border-bottom: none;
+										}
+									}
+								}
+
+							}
 
 							.nav-link {
 								height: 100%;
@@ -157,7 +174,6 @@
 								}
 
 								&.active, &.show, &:hover, &:focus {
-
 									@media screen and (min-width: 992px) {
 										border-bottom: 5px solid $primaria;
 										position: relative;
@@ -173,6 +189,12 @@
 											bottom: 0;
 											left: 0;
 										}
+									}
+								}
+
+								&.active {
+									@media screen and (max-width: 991px) {
+										border-bottom: 4px solid $primaria;
 									}
 								}
 							}
@@ -221,6 +243,10 @@
 									&.active, &:hover, &:focus {
 										background-color: transparent;
 										font-weight: 700;
+
+										@media screen and (max-width: 991px) {
+											border-bottom: 4px solid $preto;
+										}
 									}
 
 									@media screen and (max-width: 991px) {

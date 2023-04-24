@@ -5,6 +5,10 @@
 		width: 100%;
 		height: 500px;
 
+		@media screen and (max-width: 991px) {
+			height: 550px;
+		}
+
 		.swiper-slide {
 			width: 100%;
 			height: 100%;
@@ -40,8 +44,8 @@
 							position: relative;
 							margin-bottom: 32px;
 
-							@media screen and (max-width: 767px) {
-								max-width: 300px;
+							@media screen and (max-width: 991px) {
+								max-width: 100%;
 							}
 	
 							&:after {
@@ -55,7 +59,7 @@
 								left: 0;
 							}
 
-							@media screen and (max-width: 767px) {
+							@media screen and (max-width: 991px) {
 								font-size: 20px;
 								line-height: 24px;
 							}
@@ -67,11 +71,12 @@
 							line-height: 29px;
 							color: #F2FAEF;
 							text-align: left;
-							max-width: 663px;
+							max-width: 713px;
 
-							@media screen and (max-width: 767px) {
+							@media screen and (max-width: 991px) {
 								font-size: 14px;
 								line-height: 17px;
+								max-width: 100%;
 							}
 						}
 					}
@@ -86,8 +91,9 @@
 							width: 400px;
 							height: auto;
 
-							@media screen and (max-width: 767px) {
-								width: 220px;
+							@media screen and (max-width: 991px) {
+								width: 250px;
+								margin-bottom: 24px;
 							}
 						}
 					}
@@ -95,7 +101,7 @@
 
 				&.slider-type-1 {
 					.row-slider {
-						@media screen and (max-width: 767px) {
+						@media screen and (max-width: 991px) {
 							flex-direction: column-reverse;
 						}
 					
@@ -110,21 +116,21 @@
 								text-align: left;
 							}
 	
-							@media screen and (max-width: 767px) {
+							@media screen and (max-width: 991px) {
 								align-items: center;
 		
 								h1 {
-									text-align: center;
+									text-align: left;
 								}
 				
 								P {
-									text-align: center;
+									text-align: left;
 								}
 							}
 						}
 						
 						.line-slider-image {
-							@media screen and (max-width: 767px) {
+							@media screen and (max-width: 991px) {
 								margin-bottom: 30px;
 							}
 						}
@@ -143,21 +149,21 @@
 							text-align: right;
 						}
 
-						@media screen and (max-width: 767px) {
+						@media screen and (max-width: 991px) {
 							align-items: center;
 	
 							h1 {
-								text-align: center;
+								text-align: left;
 							}
 			
 							P {
-								text-align: center;
+								text-align: left;
 							}
 						}
 					}
 						
 					.line-slider-image {
-						@media screen and (max-width: 767px) {
+						@media screen and (max-width: 991px) {
 							margin-bottom: 30px;
 						}
 					}
@@ -190,10 +196,8 @@
     .slider-clients {
 		margin-top: 48px;
 		width: 100%;
-		// height: 350px;
-		background: #FFFFFF;
+		background: $branco;
 		box-shadow: 3px 10px 18px rgba(124, 216, 84, 0.35);
-		// padding: 24px 32px;
 		border-radius: 35px;
 
 		.swiper-slide {
@@ -210,10 +214,8 @@
     .slider-team {
 		margin-top: 48px;
 		width: 100%;
-		// height: 350px;
 		background: #FFFFFF;
 		box-shadow: 3px 10px 18px rgba(124, 216, 84, 0.35);
-		// padding: 24px 32px;
 		border-radius: 35px;
 
 		.swiper-slide {
@@ -368,6 +370,158 @@
 	}
 }
 
+.swiper{
+	&.swiper-slider {
+		margin-top: 24px;
+		overflow: visible;
+
+		@media screen and (max-width: 991px) {
+			overflow: hidden;
+		}
+
+		.swiper-slide {
+			.marca-dagua {
+				box-shadow: 6px 6px 24px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+
+	&.swiper-team {
+		width: 100%;
+		height: 900px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (max-width: 991px) {
+			height: 500px;	
+		}
+
+		.swiper-slide {
+			background: transparent;
+			height: calc((100% - 90px) / 3) !important;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media screen and (max-width: 991px) {
+				height: calc((100% - 60px) / 2) !important;
+			}
+
+			.flip-card {
+				background-color: transparent;
+				width: 450px;
+				height: 250px;
+				perspective: 1000px;
+
+				@media screen and (max-width: 991px) {
+					width: 300px;
+					height: 300px;	
+				}
+				
+				.flip-card-inner {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					text-align: center;
+					transition: transform 0.6s;
+					transform-style: preserve-3d;
+					backface-visibility: hidden;
+					-moz-backface-visibility: hidden;
+					
+					.flip-card-front, .flip-card-back {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						backface-visibility: hidden;
+						-moz-backface-visibility: hidden;
+					}
+
+					.flip-card-front {
+						z-index: 2;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						padding: 24px;
+
+						img {
+							width: 105px;
+							height: 105px;
+							margin-bottom: 24px;
+
+							@media screen and (max-width: 991px) {
+								width: 60px;
+								height: 60px;	
+							}
+						}
+
+						h1 {
+							font-weight: 700;
+							font-size: 32px;
+							line-height: 39px;
+							color: #0C1707;
+
+							@media screen and (max-width: 991px) {
+								font-size: 16.8149px;
+								line-height: 20px;
+							}
+						}
+					}
+				
+					.flip-card-back {
+						transform: rotateY(180deg);
+						z-index: 1;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						padding: 24px;
+
+						h1 {
+							font-weight: 700;
+							font-size: 32px;
+							line-height: 39px;
+							color: #0C1707;
+							
+							@media screen and (max-width: 991px) {
+								font-size: 16.8149px;
+								line-height: 20px;
+							}
+						}
+						
+						p {
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 19px;
+							color: #000000;
+							
+							@media screen and (max-width: 991px) {
+								font-size: 14px;
+								line-height: 17px;
+							}
+						}
+					}
+				}
+
+				&:hover, &:focus {
+					.flip-card-inner {
+						transform: rotateY(180deg);
+					}
+				}
+				
+				&:focus {
+					outline: 0;
+				}
+			}
+		}
+	}
+
+	&.swiper-values {
+		width: 100%;
+		height: 100%;
+	}
+}
+
 .swiper-pagination-bullets {
 	padding: 24px 0;
 	
@@ -384,7 +538,7 @@
 		height: 20px;
 		opacity: 1;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 991px) {
 			width: 15px;
 			height: 15px;
 		}
